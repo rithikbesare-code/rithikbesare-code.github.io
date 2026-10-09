@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="description" content="A coursework project on interest rate swap structure, present-value pricing, hedging and risk by Rithik Besare." />
+    <title>Interest Rate Swaps — Rithik Besare</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../project-detail.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="../../" aria-label="Rithik Besare home"><span class="wordmark-mark">R</span><span>Rithik B<span class="wordmark-dot">.</span></span></a>
+      <a class="project-back" href="../../#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="project-detail">
+      <p class="detail-breadcrumb">Academic project / Financial Markets and Product / 2024–25</p>
+      <section class="detail-hero" aria-labelledby="project-title">
+        <div>
+          <p class="detail-kicker">COURSEWORK ESSAY · INTEREST RATE DERIVATIVES</p>
+          <h1 id="project-title">Interest rate swaps:<br /><em>pricing, hedging &amp; risk.</em></h1>
+          <p class="detail-lede">A structured study of how fixed and floating interest payments are exchanged, how a par swap rate is valued, and how firms and investors use swaps to manage or take interest-rate exposure.</p>
+        </div>
+        <div class="detail-cover" role="img" aria-label="Diagram showing fixed and floating payment legs of an interest rate swap">
+          <span class="detail-cover-label top">FIXED LEG · FLOATING LEG</span>
+          <span class="detail-cover-core">INTEREST<br />RATE<br />SWAPS</span>
+          <span class="detail-cover-label bottom">PRICE · HEDGE · MANAGE</span>
+        </div>
+      </section>
+      <div class="detail-facts" aria-label="Project details">
+        <div class="detail-fact"><span>Course</span><b>Financial Markets and Product</b></div>
+        <div class="detail-fact"><span>Format</span><b>Coursework essay</b></div>
+        <div class="detail-fact"><span>Word count</span><b>2,914 words</b></div>
+        <div class="detail-fact"><span>Study period</span><b>2024–25</b></div>
+      </div>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">01</span><h2>Project focus</h2></div>
+        <p class="detail-question">How do interest rate swaps work, how is their fixed rate determined, and how can they help manage interest-rate exposure?</p>
+        <p>The essay moves from contract features to valuation and practical use. It reviews fixed-for-floating swaps and floating-for-floating basis swaps, then discusses related products such as cross-currency and inflation swaps. Its practical themes include corporate hedging, portfolio positioning, speculation, asset–liability management and risk control.</p>
+        <div class="detail-callout"><p>A swap exchanges interest cash flows calculated on a notional amount. In a standard single-currency vanilla swap, the notional amount is used to calculate payments; it is not itself exchanged.</p></div>
+      </section>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">02</span><h2>How the contract works</h2></div>
+        <div class="detail-theme-grid">
+          <article class="detail-theme"><span class="theme-index">01 / FIXED–FLOATING</span><h3>Two payment legs</h3><p>One party pays fixed and receives floating; the other pays floating and receives fixed. The benchmark, notional, dates, payment frequency and day-count convention determine the cash flows.</p></article>
+          <article class="detail-theme"><span class="theme-index">02 / BENCHMARKS</span><h3>Reference rates</h3><p>The coursework uses LIBOR and SOFR examples. For contemporary USD context, the page uses SOFR-based examples; other currencies have their own benchmarks and conventions.</p></article>
+          <article class="detail-theme"><span class="theme-index">03 / RATE EXPOSURE</span><h3>Position direction</h3><p>In simple terms, paying fixed and receiving floating tends to gain value when market rates rise; receiving fixed and paying floating tends to gain value when rates fall. Actual value also depends on schedule, curve and contract details.</p></article>
+          <article class="detail-theme"><span class="theme-index">04 / RELATED STRUCTURES</span><h3>Basis and other swaps</h3><p>A floating-for-floating basis swap exchanges payments tied to different floating benchmarks. Cross-currency and inflation swaps extend the idea but introduce additional currency or inflation exposures.</p></article>
+        </div>
+      </section>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">03</span><h2>Valuation in the coursework</h2></div>
+        <p>The essay explains swap valuation as a comparison of the present value of the two legs. At inception, the par fixed rate is chosen so that the discounted fixed and floating cash flows have equal value under the pricing assumptions and contract conventions.</p>
+        <div class="detail-note"><p><strong>Simplified cash-flow notation:</strong> PV of the fixed leg = N × K × Σ(αᵢ × DFᵢ). PV of the floating leg = N × Σ(αᵢ × Fᵢ × DFᵢ). Here N is the notional, K the fixed rate, αᵢ the period accrual fraction, Fᵢ the projected floating coupon for the period, and DFᵢ its discount factor. For compounded overnight swaps, the floating coupon is built from rates compounded across the accrual period.</p></div>
+        <h3>Worked illustration</h3>
+        <p>Using the three annual periods shown in the coursework’s worked calculation, the notional is $100 million, the discount factors are 0.99, 0.97 and 0.95, and the floating coupons are 3.0%, 3.3% and 3.5%.</p>
+        <div class="detail-takeaways">
+          <article><b>01 / FLOATING LEG</b><p>Discounted value: $2.970m + $3.201m + $3.325m = <strong>$9.496m</strong>.</p></article>
+          <article><b>02 / FIXED LEG AT 3%</b><p>Discounted value: $2.970m + $2.910m + $2.850m = <strong>$8.730m</strong>.</p></article>
+          <article><b>03 / PAR RATE</b><p>With annual accrual fractions of 1, the fixed rate that equates the legs is about <strong>3.26%</strong>.</p></article>
+        </div>
+        <p>The example is deliberately simplified. Real valuations use contractual payment schedules, accrual fractions, benchmark compounding, market curves, collateral terms and currency-specific conventions. Projection curves estimate floating coupons; discount factors value the resulting payments.</p>
+      </section>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">04</span><h2>Applications and risk</h2></div>
+        <div class="detail-theme-grid">
+          <article class="detail-theme"><span class="theme-index">01 / HEDGING</span><h3>Stabilising floating debt</h3><p>A borrower with floating-rate debt can pay fixed and receive floating in a swap. The received benchmark can offset the floating benchmark on the debt, leaving a more predictable fixed benchmark cost plus any loan spread or basis mismatch.</p></article>
+          <article class="detail-theme"><span class="theme-index">02 / INVESTMENT</span><h3>Taking a rate view</h3><p>Investors may use swaps to express a view on rate changes or the shape of a yield curve. Such positions can gain or lose value as rates move and should not be described as guaranteed arbitrage.</p></article>
+          <article class="detail-theme"><span class="theme-index">03 / PORTFOLIOS</span><h3>Duration and balance sheets</h3><p>Swaps can adjust a portfolio’s interest-rate sensitivity or help an institution manage gaps between asset and liability rate exposures.</p></article>
+          <article class="detail-theme"><span class="theme-index">04 / RISK CONTROL</span><h3>Risks to manage</h3><p>Key risks include rate and curve movements, basis mismatch, counterparty exposure, collateral needs, liquidity, model assumptions and legal or operational terms. A hedge can reduce a targeted exposure without removing every risk.</p></article>
+        </div>
+        <div class="detail-note"><p><strong>Benchmark update:</strong> The source essay includes legacy LIBOR examples. The U.S. clearing framework has transitioned specified swaps from LIBOR toward overnight reference-rate products such as SOFR. The portfolio synopsis uses SOFR for current USD context and treats benchmark choice as currency- and contract-specific.</p></div>
+      </section>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">05</span><h2>Research process and learning</h2></div>
+        <p>The coursework combines secondary reading with simplified numerical examples rather than original market-data analysis. Its Issue and Decision Log records seven entries from October 2024 to January 2025. The entries track how the work addressed topic scope, the pricing method and yield curves, connecting theory to practice, referencing, word count, technical clarity and the final assessment criteria.</p>
+        <div class="detail-takeaways">
+          <article><b>01 / STRUCTURE</b><p>Organised the topic from swap mechanics to pricing, applications and risk.</p></article>
+          <article><b>02 / VALUATION</b><p>Worked through discounted cash-flow examples to connect the par rate with the value of each leg.</p></article>
+          <article><b>03 / EVALUATION</b><p>Compared the usefulness of swaps for hedging with the market, basis, counterparty and liquidity risks that remain.</p></article>
+        </div>
+        <div class="detail-note"><p><strong>Scope:</strong> This is a portfolio summary of a coursework essay, not investment advice or a new empirical study. The numerical example is illustrative and uses the assumptions stated above.</p></div>
+      </section>
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">06</span><h2>Selected sources</h2></div>
+        <p>These records include sources listed in the essay and primary institutional material used to update its benchmark and pricing context.</p>
+        <ol class="detail-references">
+          <li><span>Baker, L., Haynes, R., Roberts, J. S., Sharma, R., &amp; Tuckman, B. (2020). “Risk Transfer with Interest Rate Swaps.” CFTC Office of the Chief Economist Staff Paper 2020-002. <a href="https://www.cftc.gov/sites/default/files/2020-06/Risk%20Transfer%20Using%20Interest%20Rate%20Swaps%20March%202020_ada.pdf" target="_blank" rel="noreferrer">CFTC paper ↗</a></span></li>
+          <li><span>McPhail, L., Schnabl, P., &amp; Tuckman, B. (2023). “Do Banks Hedge Using Interest Rate Swaps?” CFTC Office of the Chief Economist. <a href="https://www.cftc.gov/sites/default/files/2023-04/Banks_and_Derivatives_04102023_ada.pdf" target="_blank" rel="noreferrer">CFTC paper ↗</a></span></li>
+          <li><span>Boyarchenko, N., Gupta, P., &amp; Steele, N. (2018). “Negative Swap Spreads.” <em>Federal Reserve Bank of New York Economic Policy Review</em>, 24(2). <a href="https://www.newyorkfed.org/medialibrary/media/research/epr/2018/epr_2018_negative-swap-spreads_boyarchenko.pdf" target="_blank" rel="noreferrer">New York Fed paper ↗</a></span></li>
+          <li><span>CME Group (2025). “Pricing and Hedging USD SOFR Interest Rate Swaps with SOFR Futures.” <a href="https://www.cmegroup.com/articles/2025/price-and-hedging-usd-sofr-interest-swaps-with-sofr-futures.html" target="_blank" rel="noreferrer">CME Group article ↗</a></span></li>
+          <li><span>Commodity Futures Trading Commission (2022). “Final Rule Modifying the Swap Clearing Requirement in Support of the Transition from LIBOR and Other Interbank Offered Rates to Alternative Reference Rates.” <a href="https://www.cftc.gov/PressRoom/PressReleases/8573-22" target="_blank" rel="noreferrer">CFTC notice ↗</a></span></li>
+        </ol>
+      </section>
+      <footer class="detail-footer"><p>FINANCIAL MARKETS AND PRODUCT · 2024–25</p><a class="button button-dark" href="../../#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </body>
+</html>
