@@ -1,0 +1,46 @@
+.ipo-project { --ipo-ink: #23372f; --ipo-green: #315d49; --ipo-coral: #d98a69; }
+.ipo-cover { position: relative; overflow: hidden; background: linear-gradient(145deg, #e6e6d9, #f1e7d8 58%, #dce4d9); color: var(--ipo-ink); }
+.ipo-cover::before { position: absolute; inset: 17% 13% 14%; border: 1px solid rgba(49,93,73,.16); border-radius: 50%; content: ""; }
+.ipo-cover::after { position: absolute; width: 17rem; height: 17rem; right: -5rem; bottom: -7rem; border: 1px dashed rgba(49,93,73,.18); border-radius: 50%; content: ""; }
+.ipo-cover .detail-cover-label { color: rgba(35,55,47,.66); }
+.ipo-cover-title { position: absolute; z-index: 1; top: 20%; left: 11%; display: grid; gap: .4rem; }
+.ipo-cover-title span { color: var(--ipo-green); font-size: .62rem; font-weight: 700; letter-spacing: .15em; }
+.ipo-cover-title strong { font-family: Georgia, serif; font-size: 1.2rem; font-weight: 500; }
+.ipo-cover-chart { position: absolute; z-index: 1; left: 11%; right: 10%; bottom: 18%; height: 43%; padding-left: 2.6rem; }
+.ipo-y-label { position: absolute; left: 0; color: rgba(35,55,47,.54); font-size: .48rem; letter-spacing: .1em; }
+.ipo-y-label.y-one { top: 3%; }.ipo-y-label.y-two { bottom: 28%; }
+.ipo-gridline { position: absolute; left: 2.6rem; right: 0; border-top: 1px solid rgba(35,55,47,.12); }
+.ipo-gridline.grid-one { top: 7%; }.ipo-gridline.grid-two { top: 43%; }.ipo-gridline.grid-three { bottom: 27%; }
+.ipo-bars { position: absolute; inset: 8% 0 29%; display: flex; align-items: end; justify-content: space-around; gap: .7rem; }
+.ipo-bars i { z-index: 1; width: 12%; min-width: 1rem; border-radius: .35rem .35rem 0 0; background: linear-gradient(180deg, #5f8b6e, #315d49); }
+.ipo-bars .offer-bar { height: 31%; background: #d98a69; }.ipo-bars .first-close-bar { height: 56%; }.ipo-bars .year-one-bar { height: 72%; }.ipo-bars .year-two-bar { height: 64%; }.ipo-bars .year-three-bar { height: 83%; }
+.ipo-x-labels { position: absolute; left: 2.6rem; right: 0; bottom: 9%; display: flex; justify-content: space-around; color: rgba(35,55,47,.64); font-size: .45rem; letter-spacing: .06em; }
+.ipo-benchmark-line { position: absolute; z-index: 2; left: 2.6rem; right: 0; top: 49%; border-top: 2px dashed #d98a69; }
+.ipo-benchmark-line span { position: absolute; right: 0; top: .25rem; color: #8c5944; font-size: .48rem; letter-spacing: .04em; }
+.ipo-design-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin: 1.6rem 0; }
+.ipo-design-grid article { min-height: 10rem; padding: 1.25rem; border: 1px solid rgba(49,93,73,.14); border-radius: 1rem; background: rgba(255,253,248,.65); }
+.ipo-design-grid article > span,.ipo-next-steps h3 { color: var(--ipo-green); font-size: .64rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.ipo-design-grid h3 { margin: .8rem 0 .4rem; font-family: Georgia,serif; font-size: 1.2rem; font-weight: 500; }
+.ipo-design-grid p { margin: 0; color: #5d665e; font-size: .92rem; line-height: 1.6; }
+.ipo-equation { display: inline-block; margin: .5rem 0 .15rem; padding: .85rem 1.1rem; border-left: 3px solid var(--ipo-coral); background: #f2eee4; color: var(--ipo-ink); font-family: Georgia,serif; font-size: 1.03rem; }
+.ipo-result-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .8rem; margin: 1.4rem 0 1.6rem; }
+.ipo-result-strip article { display: grid; min-height: 6rem; align-content: center; gap: .25rem; padding: .9rem 1rem; border: 1px solid rgba(49,93,73,.15); border-radius: .9rem; background: #f0f0e7; }
+.ipo-result-strip span { color: #657469; font-size: .58rem; font-weight: 700; letter-spacing: .1em; }
+.ipo-result-strip b { color: var(--ipo-green); font-family: Georgia,serif; font-size: 1.45rem; font-weight: 500; }
+.ipo-result-strip small { color: #5e655e; font-size: .72rem; }
+.ipo-results-table tr.ipo-significant { background: rgba(49,93,73,.075); }
+.ipo-results-table tr.ipo-significant td:first-child { color: var(--ipo-green); font-weight: 700; }
+.ipo-check-table th:first-child { min-width: 9rem; }
+.ipo-integrity-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .75rem; margin: 1.4rem 0; }
+.ipo-integrity-grid article { display: flex; min-height: 6rem; flex-direction: column; justify-content: center; gap: .3rem; padding: .85rem; border-radius: .8rem; background: #e8ede5; }
+.ipo-integrity-grid strong { color: var(--ipo-green); font-family: Georgia,serif; font-size: 1.5rem; font-weight: 500; }
+.ipo-integrity-grid span { color: #55635a; font-size: .74rem; line-height: 1.4; }
+.ipo-interpretation-note { border-color: rgba(217,138,105,.45); background: #f7eee6; }
+.ipo-next-steps { margin: 1.5rem 0; padding: 1.2rem 1.4rem; border: 1px solid rgba(49,93,73,.15); border-radius: 1rem; background: #f1f1e9; }
+.ipo-next-steps h3 { margin: 0 0 .7rem; }
+.ipo-next-steps ol { margin: 0; padding-left: 1.25rem; color: #505e55; }
+.ipo-next-steps li { padding: .3rem 0 .3rem .2rem; line-height: 1.6; }
+.ipo-sources li { margin: .55rem 0; line-height: 1.65; }
+@media (max-width: 760px) { .ipo-design-grid { grid-template-columns: 1fr; }.ipo-design-grid article { min-height: auto; }.ipo-result-strip,.ipo-integrity-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.ipo-cover-title strong { max-width: 14rem; font-size: 1.02rem; } }
+@media (max-width: 430px) { .ipo-result-strip { grid-template-columns: 1fr 1fr; }.ipo-integrity-grid { grid-template-columns: 1fr 1fr; }.ipo-cover-chart { left: 8%; right: 8%; }.ipo-cover-title { left: 8%; } }
+
