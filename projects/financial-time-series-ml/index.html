@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="description" content="Financial econometrics coursework applying panel regression, ARMA and GARCH models to stock returns, with a conceptual machine-learning section." />
+    <title>Financial Econometrics &amp; Machine Learning — Rithik Besare</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../project-detail.css" />
+    <link rel="stylesheet" href="financial-time-series-ml.css" />
+    <script src="../../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="../../" aria-label="Rithik Besare home"><span class="wordmark-mark">R</span><span>Rithik B<span class="wordmark-dot">.</span></span></a>
+      <a class="project-back" href="../../#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="project-detail">
+      <p class="detail-breadcrumb">Academic project / Financial econometrics / EViews</p>
+      <section class="detail-hero" aria-labelledby="project-title">
+        <div>
+          <p class="detail-kicker">PANEL DATA · TIME SERIES · VOLATILITY · MACHINE LEARNING</p>
+          <h1 id="project-title">Financial econometrics <em>&amp; market behaviour</em></h1>
+          <p class="detail-lede">A practical assignment on stock returns, moving from a four-company panel to HDFC Bank time-series and volatility models. It compares OLS, fixed and random effects, correlograms, ARMA forecasts and GARCH estimates, then introduces a possible neural-network workflow.</p>
+        </div>
+        <div class="detail-cover analysis-cover" role="img" aria-label="Illustration of changing stock returns across panel, ARMA and GARCH methods">
+          <span class="detail-cover-label top">DAILY RETURNS · PANEL TO VOLATILITY</span>
+          <svg class="analysis-cover-chart" viewBox="0 0 480 220" role="img" aria-labelledby="chart-title chart-description">
+            <title id="chart-title">Illustrative stock-return plot</title>
+            <desc id="chart-description">A zero baseline and a return series with positive and negative shocks.</desc>
+            <path class="chart-grid" d="M12 42H468 M12 88H468 M12 134H468 M12 180H468" />
+            <path class="chart-zero" d="M12 111H468" />
+            <polyline class="chart-line" points="12,112 27,89 42,118 57,105 72,139 87,126 102,98 117,108 132,76 147,113 162,127 177,100 192,115 207,160 222,121 237,97 252,107 267,90 282,117 297,124 312,76 327,102 342,133 357,107 372,114 387,64 402,101 417,120 432,89 447,112 468,103" />
+          </svg>
+          <span class="detail-cover-label bottom">PANEL · ARMA · GARCH</span>
+        </div>
+      </section>
+      <div class="detail-facts" aria-label="Project details">
+        <div class="detail-fact"><span>Panel sample</span><b>4 companies · 100 days</b></div>
+        <div class="detail-fact"><span>Panel observations</span><b>400 balanced rows</b></div>
+        <div class="detail-fact"><span>Time-series sample</span><b>493 daily observations</b></div>
+        <div class="detail-fact"><span>Software</span><b>EViews · Excel</b></div>
+      </div>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">01</span><h2>Data and research design</h2></div>
+        <p class="detail-question">How much can market returns explain company excess returns, and do past stock returns help describe or forecast the next period?</p>
+        <p>The panel exercise combines four Indian listed companies from different sectors: HDFC Bank, MRF Limited, Deepak Nitrite and Tata Power. It uses the latest 100 trading days for each company alongside a market index and risk-free rate. Returns are calculated as <code>rₜ = ln(Pₜ / Pₜ₋₁)</code>, then arranged as a balanced panel with 400 company-day observations.</p>
+        <p>A separate time-series exercise selects HDFC Bank. Its EViews outputs show 493 daily observations spanning roughly May 2022 to October 2024. The assignment covers panel estimators, return autocorrelation, ARMA forecasting, ARCH testing, GARCH volatility and a conceptual neural-network use case.</p>
+        <div class="detail-callout"><p>The panel and time-series exercises use different sample lengths. The coursework does not clearly document the raw price, market-index and risk-free data providers or their retrieval dates, which limits exact reproduction.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">02</span><h2>Panel regression and CAPM discussion</h2></div>
+        <p>The dependent variable is labelled <code>COMPANY_EXCESS_RETURN</code>, with <code>INDEX_RETURN</code> as the market factor. The coursework compares pooled OLS, fixed effects (FE) and random effects (RE).</p>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table">
+            <thead><tr><th scope="col">Estimator</th><th scope="col">R-squared</th><th scope="col">Market-beta t-statistic</th><th scope="col">Alpha p-value</th></tr></thead>
+            <tbody>
+              <tr><td>OLS</td><td>0.007559</td><td>1.741</td><td>0.5848</td></tr>
+              <tr><td>Fixed effects</td><td>0.008771</td><td>1.735</td><td>about 0.586</td></tr>
+              <tr><td>Random effects</td><td>0.007559</td><td>about 1.735</td><td>about 0.586</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Across the reported models, the market-return coefficient is positive but weak, and the models explain less than 1% of the variation in company excess returns. The alpha estimates are statistically insignificant in the coursework output. That means the analysis does not reject a zero intercept; by itself, it does not establish that CAPM is correct or that the model explains returns well.</p>
+        <div class="detail-note"><p><strong>Model-selection note:</strong> The report describes FE and RE as alternatives but does not show a Hausman test or another documented selection rule. It therefore does not establish which panel estimator is preferred.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">03</span><h2>Return dynamics and ARMA forecast</h2></div>
+        <p>The HDFC Bank correlogram reports 36 lags. ACF and PACF values stay close to zero, and the Ljung–Box test does not show strong evidence of serial correlation in the mean returns; the reported lag-36 p-value is 0.484.</p>
+        <div class="detail-takeaways">
+          <article><b>01 / MODEL FIT</b><p>The ARMA output reports R-squared 0.0353, adjusted R-squared 0.0234 and Durbin–Watson 1.933. The overall F-test p-value is 0.0074, while most individual lag terms are not statistically significant.</p></article>
+          <article><b>02 / FORECAST SHAPE</b><p>The out-of-sample return forecast is nearly flat around zero and misses the larger observed moves. Reported errors include RMSE 0.01386, MAE 0.00858 and symmetric MAPE 182.4%.</p></article>
+          <article><b>03 / SPECIFICATION CHECK</b><p>The assignment asks for ARMA(3,2), but the EViews coefficient table labels AR(6), AR(19), AR(30), MA(6) and MA(19). The stated order and displayed output do not match.</p></article>
+        </div>
+        <p>The results suggest that a simple conditional-mean model did not capture the sharp return movements in this sample. A low RMSE alone can be misleading when returns are concentrated near zero; the high relative error and flat forecast are relevant diagnostics.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">04</span><h2>Volatility tests and GARCH</h2></div>
+        <p>The ARCH LM test reports a p-value of 0.0562. This is close to, but above, the conventional 5% threshold; the result is marginal evidence rather than a clear rejection of constant variance at that level.</p>
+        <div class="detail-assumption-grid" aria-label="Selected GARCH output">
+          <div class="detail-assumption"><span>ARCH shock term</span><strong>0.2405</strong><small>Reported p-value &lt; 0.001</small></div>
+          <div class="detail-assumption"><span>Lagged variance term</span><strong>0.0273</strong><small>Reported p-value 0.7871</small></div>
+          <div class="detail-assumption"><span>GARCH forecast SMAPE</span><strong>173.74%</strong><small>Reported out-of-sample error</small></div>
+        </div>
+        <p>The EViews variance equation shows a significant lagged squared-shock term but an insignificant lagged-variance term. The forecasted mean remains close to zero, while the forecast variance settles to a nearly constant level and misses several sharp moves.</p>
+        <div class="detail-validation-list">
+          <article><span>WRITTEN INTERPRETATION</span><p>The report says the GARCH coefficient is 0.7171 and significant, implying strong volatility persistence.</p></article>
+          <article><span>DISPLAYED EViews OUTPUT</span><p>The estimated GARCH(−1) coefficient is 0.027329 with p-value 0.7871. The displayed output does not support the written claim of a significant 0.7171 coefficient.</p></article>
+        </div>
+        <div class="detail-callout"><p>The volatility section is a useful model-checking exercise: its charts and diagnostics show why a model label or a narrative interpretation needs to be checked against the underlying output.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">05</span><h2>Machine-learning application</h2></div>
+        <p>The final section explains machine learning, supervised learning, training and test sets, and neural-network structure. It proposes a stock-forecasting workflow using historical prices and economic indicators, normalization, a train/test split, an RNN or LSTM, backpropagation and out-of-sample evaluation.</p>
+        <div class="detail-note"><p><strong>Scope:</strong> The document presents a proposed neural-network application; it does not train or evaluate a neural network. The empirical analysis in the assignment uses econometric outputs, including panel regressions, ARMA and GARCH.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">06</span><h2>Skills and review notes</h2></div>
+        <div class="detail-theme-grid">
+          <article class="detail-theme"><span class="theme-index">01 / PANEL DATA</span><h3>Compare pooled and panel estimators</h3><p>Organised four company return series into a balanced panel and compared OLS, FE and RE model summaries.</p></article>
+          <article class="detail-theme"><span class="theme-index">02 / TIME SERIES</span><h3>Read correlograms and forecasts</h3><p>Interpreted ACF/PACF, Ljung–Box statistics, ARMA fit and out-of-sample return forecasts.</p></article>
+          <article class="detail-theme"><span class="theme-index">03 / VOLATILITY</span><h3>Check conditional variance</h3><p>Reviewed the ARCH LM test, GARCH variance equation and the difference between mean-return and volatility fit.</p></article>
+          <article class="detail-theme"><span class="theme-index">04 / EVIDENCE REVIEW</span><h3>Reconcile narrative and output</h3><p>Identified the ARMA-order mismatch and the conflicting GARCH coefficient interpretation in the submitted document.</p></article>
+        </div>
+        <div class="detail-validation-list">
+          <article><span>DATA REPRODUCIBILITY</span><p>The supplied document does not clearly identify the providers and retrieval dates for the stock-price, market-index and risk-free series.</p></article>
+          <article><span>STATISTICAL CONCLUSION</span><p>Insignificant alpha is not proof that CAPM holds. The low R-squared values, weak beta evidence and limited estimator-selection discussion should remain part of the interpretation.</p></article>
+        </div>
+        <div class="detail-note"><p><strong>Scope:</strong> This page summarises the coursework rather than reproducing its full data table or assignment text. It is an academic project record, not a stock forecast or trading recommendation.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">07</span><h2>Selected references</h2></div>
+        <p>These selected sources connect the coursework topics to foundational panel-data, volatility and forecasting references.</p>
+        <ol class="detail-references">
+          <li><span>Engle, R. F. (1982). “Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation.” <em>Econometrica</em>, 50(4), 987–1007. <a href="https://www.jstor.org/stable/1912773" target="_blank" rel="noreferrer">JSTOR article record ↗</a></span></li>
+          <li><span>Bollerslev, T. (1986). “Generalized Autoregressive Conditional Heteroskedasticity.” <em>Journal of Econometrics</em>, 31(3), 307–327. <a href="https://scholars.duke.edu/publication/1227936" target="_blank" rel="noreferrer">Duke Scholars publication record ↗</a></span></li>
+          <li><span>Hsiao, C. (2014). <em>Analysis of Panel Data</em>, 3rd ed. Cambridge University Press. <a href="https://www.cambridge.org/core/books/analysis-of-panel-data/A774C63FF969DA1944A3F91501702C65" target="_blank" rel="noreferrer">Cambridge University Press ↗</a></span></li>
+          <li><span>Hyndman, R. J. &amp; Athanasopoulos, G. <em>Forecasting: Principles and Practice</em>. <a href="https://otexts.com/fpp3/" target="_blank" rel="noreferrer">Open textbook by the authors ↗</a></span></li>
+          <li><span>Jordan, M. I. &amp; Mitchell, T. M. (2015). “Machine learning: Trends, perspectives, and prospects.” <em>Science</em>, 349(6245), 255–260. <a href="https://www.science.org/doi/10.1126/science.aaa8415" target="_blank" rel="noreferrer">Science article ↗</a></span></li>
+        </ol>
+      </section>
+      <footer class="detail-footer"><p>FINANCIAL ECONOMETRICS · PANEL DATA · TIME SERIES · MACHINE LEARNING</p><a class="button button-dark" href="../../#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </body>
+</html>
+
