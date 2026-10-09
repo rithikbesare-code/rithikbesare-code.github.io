@@ -15,3 +15,14 @@ body[data-theme=dark]{--paper:#202a24;--paper-2:#28342c;--surface:#303b33;--ink:
 .governance-orbit i:first-child{top:-26px;left:5px}.governance-orbit i:nth-child(2){right:-28px;bottom:10px}
 .governance-footer{border-top:1px solid #d9e2d266;padding-top:10px}
 body[data-theme=dark] .visual-governance{background:radial-gradient(circle at 50% 47%,#49664f 0,#2f4937 58%,#253a2d 100%)}
+
+.visual-swap{background:radial-gradient(circle at 48% 45%,#dbe5dc 0,#e7e9df 52%,#d4ddd5 100%);padding:22px 25px;color:var(--green);display:flex;flex-direction:column;justify-content:space-between}
+.swap-head,.swap-foot{display:flex;justify-content:space-between;font:8px var(--mono);letter-spacing:.09em;color:#687869}
+.swap-flow{display:flex;align-items:center;justify-content:center;gap:14px}
+.swap-leg{width:37%;min-height:82px;background:#fffdf8;border:1px solid #cad4c9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 20px #203e3110}
+.swap-leg small,.swap-leg span{font:7px var(--mono);letter-spacing:.08em;color:#8b938a}
+.swap-leg b{font:500 19px var(--serif);color:var(--green)}
+.swap-arrow{font:18px var(--sans);color:var(--coral)}
+.swap-foot{border-top:1px solid #bfcabe;padding-top:10px;color:#687869}
+body[data-theme=dark] .visual-swap{background:linear-gradient(140deg,#35473a,#303d34)}
+body[data-theme=dark] .swap-leg{background:#e9e8dd;color:#24342a}
