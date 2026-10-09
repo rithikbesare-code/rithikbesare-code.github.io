@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="description" content="A reviewed CAPM coursework project testing daily market sensitivity across 15 Indian equities, with a check of the regression specification and reported conclusions." />
+    <title>CAPM &amp; Systematic Risk in Indian Equities — Rithik Besare</title>
+    <link rel="stylesheet" href="../../project-detail.css" />
+    <link rel="stylesheet" href="capm.css" />
+    <script src="../../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="../../" aria-label="Rithik Besare home"><span class="wordmark-mark">R</span><span>Rithik B<span class="wordmark-dot">.</span></span></a>
+      <a class="project-back" href="../../#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main" class="project-detail capm-project">
+      <p class="detail-breadcrumb">Academic project / Research methods / Indian equities</p>
+      <section class="detail-hero" aria-labelledby="project-title">
+        <div>
+          <p class="detail-kicker">CAPM · SYSTEMATIC RISK · DAILY RETURNS</p>
+          <h1 id="project-title">Market risk in <em>Indian equities</em></h1>
+          <p class="detail-lede">This research methods project studies how 15 Indian stocks moved with the NIFTY 50 from January 2022 to January 2024. I checked the written interpretation against the supplied workbook and reconstructed the return regressions to clarify what the results do—and do not—show.</p>
+        </div>
+        <div class="detail-cover capm-cover" role="img" aria-label="Comparison of reported market betas for Adani Enterprises, Adani Ports, Power Grid and Dr Reddy's Laboratories">
+          <span class="detail-cover-label top">MARKET SENSITIVITY · SELECTED EQUITIES</span>
+          <div class="capm-cover-title"><span>REPORTED BETA</span><strong>Daily returns · NIFTY 50</strong></div>
+          <div class="capm-beta-chart" aria-hidden="true">
+            <div class="capm-beta-row"><span>Adani Enterprises</span><div class="capm-beta-track"><i style="--beta-width:100%"></i></div><b>1.71</b></div>
+            <div class="capm-beta-row"><span>Adani Ports</span><div class="capm-beta-track"><i style="--beta-width:88%"></i></div><b>1.51</b></div>
+            <div class="capm-beta-row"><span>Power Grid</span><div class="capm-beta-track"><i style="--beta-width:31%"></i></div><b>0.53</b></div>
+            <div class="capm-beta-row"><span>Dr Reddy’s</span><div class="capm-beta-track"><i style="--beta-width:33%"></i></div><b>0.56</b></div>
+          </div>
+          <span class="detail-cover-label bottom">OLS SLOPES · NOT EXCESS-RETURN CAPM ESTIMATES</span>
+        </div>
+      </section>
+
+      <div class="detail-facts" aria-label="Project details">
+        <div class="detail-fact"><span>Companies</span><b>15 Indian equities</b></div>
+        <div class="detail-fact"><span>Return observations</span><b>512 daily pairs</b></div>
+        <div class="detail-fact"><span>Sample period</span><b>Jan 2022–Jan 2024</b></div>
+        <div class="detail-fact"><span>Market benchmark</span><b>NIFTY 50</b></div>
+      </div>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">01</span><h2>Research question and sample</h2></div>
+        <p>The coursework asks whether systematic market risk helps explain return variation across selected Indian companies and whether the estimated sensitivity differs between firms. The sample includes 15 stocks from telecoms, energy, infrastructure, metals, cement, IT services, automobiles, pharmaceuticals and a conglomerate, with the NIFTY 50 used as the market proxy.</p>
+        <p>The workbook contains 513 daily price observations dated 3 January 2022 to 30 January 2024. Converting consecutive prices to simple daily returns produces 512 paired observations for each stock and the index. The reported regression tables also use 512 observations.</p>
+        <div class="capm-callout-grid">
+          <article><span>01 / BUILD THE SERIES</span><h3>Align daily prices</h3><p>Checked the observation dates and calculated daily percentage changes for each company and the NIFTY 50.</p></article>
+          <article><span>02 / ESTIMATE SENSITIVITY</span><h3>Compare market slopes</h3><p>Reviewed each stock’s OLS slope, model fit and intercept significance in the workbook output.</p></article>
+          <article><span>03 / CHECK THE CLAIMS</span><h3>Reconcile the report</h3><p>Compared the company-level results with the summary discussion and conclusion before presenting the findings.</p></article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">02</span><h2>Model specification</h2></div>
+        <p>A time-series CAPM regression is normally written in terms of excess returns:</p>
+        <p class="capm-equation"><span>R<sub>i,t</sub> − R<sub>f,t</sub></span> = α<sub>i</sub> + β<sub>i</sub><span>(R<sub>m,t</sub> − R<sub>f,t</sub>)</span> + ε<sub>i,t</sub></p>
+        <p>Here, β measures the stock’s sensitivity to the market’s excess return, while α is the intercept after that market exposure is accounted for. The coursework workbook includes a 10-year government-bond yield and divides it by 252 to form a daily rate. However, the reported output matches regressions of raw stock returns on raw NIFTY 50 returns. The risk-free series is not included in those regressions.</p>
+        <div class="detail-note capm-method-note"><p><strong>Interpretation:</strong> The reported slopes can be described as market sensitivities from a one-index daily return regression. They should not be presented as estimates from the excess-return CAPM specification unless the risk-free rate is subtracted from both the stock and market returns and the model is re-estimated.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">03</span><h2>Results across the 15 stocks</h2></div>
+        <p>All 15 market-return slopes are positive and statistically significant at the 1% level in the supplied output. Estimated β ranges from 0.53 for Power Grid to 1.71 for Adani Enterprises. The regression fit varies substantially: R² ranges from 1.5% for Tata Steel to 43.8% for Grasim Industries.</p>
+        <div class="capm-result-strip" aria-label="Key regression results">
+          <article><span>HIGHEST BETA</span><b>1.71</b><small>Adani Enterprises</small></article>
+          <article><span>LOWEST BETA</span><b>0.53</b><small>Power Grid</small></article>
+          <article><span>HIGHEST R²</span><b>43.8%</b><small>Grasim Industries</small></article>
+          <article><span>LOWEST R²</span><b>1.5%</b><small>Tata Steel</small></article>
+        </div>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table capm-results-table">
+            <thead><tr><th scope="col">Company</th><th scope="col">Sector in workbook</th><th scope="col">β</th><th scope="col">R²</th><th scope="col">Intercept p-value</th></tr></thead>
+            <tbody>
+              <tr><td>Adani Enterprises</td><td>Conglomerate</td><td>1.710</td><td>16.6%</td><td>0.4521</td></tr>
+              <tr><td>Adani Ports &amp; SEZ</td><td>Infrastructure</td><td>1.511</td><td>27.5%</td><td>0.5052</td></tr>
+              <tr><td>JSW Steel</td><td>Metals &amp; mining</td><td>1.169</td><td>31.6%</td><td>0.8567</td></tr>
+              <tr><td>Tech Mahindra</td><td>IT services</td><td>1.140</td><td>32.8%</td><td>0.2190</td></tr>
+              <tr class="capm-alpha-significant"><td>Wipro</td><td>IT services</td><td>1.106</td><td>41.4%</td><td>0.0305*</td></tr>
+              <tr><td>Grasim Industries</td><td>Cement</td><td>1.096</td><td>43.8%</td><td>0.7681</td></tr>
+              <tr><td>Mahindra &amp; Mahindra</td><td>Automobile</td><td>1.038</td><td>31.8%</td><td>0.0779</td></tr>
+              <tr><td>HCL Technologies</td><td>IT services</td><td>0.961</td><td>32.8%</td><td>0.7044</td></tr>
+              <tr><td>UltraTech Cement</td><td>Cement</td><td>0.941</td><td>32.0%</td><td>0.6808</td></tr>
+              <tr><td>Bharti Airtel</td><td>Telecom</td><td>0.743</td><td>25.6%</td><td>0.1129</td></tr>
+              <tr class="capm-alpha-significant"><td>NTPC</td><td>Energy</td><td>0.712</td><td>17.5%</td><td>0.0034*</td></tr>
+              <tr><td>Tata Steel</td><td>Metals &amp; mining</td><td>0.667</td><td>1.5%</td><td>0.2462</td></tr>
+              <tr class="capm-alpha-significant"><td>Bajaj Auto</td><td>Automobile</td><td>0.633</td><td>15.0%</td><td>0.0073*</td></tr>
+              <tr><td>Dr. Reddy’s Laboratories</td><td>Pharmaceuticals</td><td>0.558</td><td>13.3%</td><td>0.5885</td></tr>
+              <tr><td>Power Grid</td><td>Energy</td><td>0.525</td><td>9.7%</td><td>0.0799</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail-caption">The table reproduces the workbook’s OLS output, rounded for readability. Intercepts are measured in percentage points per day because the regression input returns are stored as percentages. *The reported intercept p-value is below 0.05. The workbook does not show a multiple-testing adjustment across the 15 regressions.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">04</span><h2>What the results support</h2></div>
+        <p>The positive, significant slopes indicate that each stock’s daily return was associated with the NIFTY 50’s daily return over this sample. A β above one means a larger estimated response to index moves in this regression; a β below one means a smaller response. This is a historical sample estimate, not a promise about future risk.</p>
+        <p>Three workbook intercepts are significant at the 5% level: NTPC (p = 0.0034), Bajaj Auto (p = 0.0073) and Wipro (p = 0.0305). The report’s company sections identify these exceptions, but its later summary says all intercepts are statistically zero. The spreadsheet supports the company-level results, so that summary statement should be revised.</p>
+        <div class="detail-validation-list">
+          <article><span>MODEL FIT</span><p>R² is not a measure of investment success. It shows how much of the observed daily return variation is accounted for by this one-index linear regression. Tata Steel’s low R² suggests that the NIFTY 50 alone explains little of its day-to-day variation in this sample.</p></article>
+          <article><span>ALPHA AND EFFICIENCY</span><p>An insignificant intercept in this small set of regressions does not establish market efficiency. Nor do three nominally significant intercepts establish persistent abnormal performance. The test depends on the specification, sample, market proxy and inference choices.</p></article>
+          <article><span>SECTOR COMPARISONS</span><p>The coursework discusses sector sensitivity, but the sample is small and uneven across sectors, and it does not present a formal sector-level test. The results support firm-level comparisons within this selected sample, not broad conclusions about whole industries.</p></article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">05</span><h2>Data and inference limits</h2></div>
+        <div class="detail-validation-list">
+          <article><span>RISK-FREE RATE</span><p>The workbook divides a 10-year government yield by 252 as a daily-rate approximation. The report names a different series identifier, and neither file documents an aligned daily cash rate or how the rate was applied to returns.</p></article>
+          <article><span>PRICE SOURCES</span><p>The report lists Yahoo Finance and NSE India, alongside RBI and Investing.com for rates. The supplied files do not identify the exact price field, retrieval date or source series for each observation, so the historical inputs cannot be fully reproduced from the citations alone.</p></article>
+          <article><span>INFERENCE</span><p>The workbook reports conventional OLS p-values, but does not document checks for serial dependence, heteroskedasticity or other return-regression diagnostics. With 15 separate intercept tests, the nominal significance results should be treated cautiously.</p></article>
+        </div>
+        <p>These limits matter because CAPM tests depend on both a suitable market proxy and a correctly specified excess-return regression. Fama and French review the model’s empirical limitations and discuss the market-proxy problem. NIFTY Indices describes NIFTY 50 as a 50-stock, float-adjusted market-capitalisation-weighted index, which is a useful benchmark but not the entire market portfolio.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">06</span><h2>Overall assessment</h2></div>
+        <p>This coursework applies daily return analysis and regression across a broad set of Indian companies, and the workbook makes the firm-level beta and fit comparisons possible. The review found that the estimated slopes can be reproduced from raw stock and NIFTY 50 returns, while the written summary needs correction on significant intercepts and the claims it draws from them.</p>
+        <p>A stronger CAPM test would use aligned daily excess returns, document price and risk-free sources at the series level, report regression diagnostics and inference choices, and test sector effects with a design suited to the sample. Until those changes are made, the results are best described as market-return sensitivities for 15 selected firms during the stated period.</p>
+        <div class="detail-note"><p><strong>Project files reviewed:</strong> <em>Research Methods Reports.docx</em> and <em>Raw Data.xlsx</em>. The coursework’s original files are not reproduced here; the page summarises the analysis and records the review findings.</p></div>
+      </section>
+
+      <section class="detail-section capm-sources">
+        <div class="detail-section-heading"><span class="detail-section-number">07</span><h2>References and data sources</h2></div>
+        <ul>
+          <li>Fama, E. F. and French, K. R. (2004), <a href="https://pubs.aeaweb.org/doi/abs/10.1257/0895330042162430" target="_blank" rel="noreferrer">“The Capital Asset Pricing Model: Theory and Evidence”</a>, <em>Journal of Economic Perspectives</em>, 18(3), 25–46.</li>
+          <li>NIFTY Indices, <a href="https://www.niftyindices.com/Methodology/Method_Nifty_50.pdf" target="_blank" rel="noreferrer">NIFTY 50 methodology</a>.</li>
+          <li>The coursework report lists <a href="https://finance.yahoo.com/" target="_blank" rel="noreferrer">Yahoo Finance</a>, <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer">National Stock Exchange of India</a>, the <a href="https://www.rbi.org.in/" target="_blank" rel="noreferrer">Reserve Bank of India</a> and <a href="https://www.investing.com/rates-bonds/india-10-year-bond-yield" target="_blank" rel="noreferrer">Investing.com’s India 10-year bond yield page</a>. The provided files do not map each observation to a source or retrieval date.</li>
+        </ul>
+      </section>
+
+      <footer class="detail-footer"><p>RESEARCH METHODS · CAPM · INDIAN EQUITY RETURNS</p><a class="button button-dark" href="../../#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </body>
+</html>
+
