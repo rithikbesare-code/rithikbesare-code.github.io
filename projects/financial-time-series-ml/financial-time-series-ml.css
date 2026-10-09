@@ -1,0 +1,24 @@
+.analysis-cover{display:block;background:radial-gradient(circle at 55% 45%,#294b3d 0,#203a31 54%,#172d27 100%);color:#f4f1e8}
+.analysis-cover:before,.analysis-cover:after{border-color:#78917d;opacity:.5}
+.analysis-cover .detail-cover-label{color:#d3e0d3}
+.analysis-cover-chart{position:absolute;inset:52px 20px 44px;width:calc(100% - 40px);height:calc(100% - 96px);overflow:visible}
+.analysis-cover-chart .chart-grid{fill:none;stroke:#7f9883;stroke-width:1;opacity:.3}
+.analysis-cover-chart .chart-zero{fill:none;stroke:#e1b4a6;stroke-width:1.5;stroke-dasharray:5 5;opacity:.8}
+.analysis-cover-chart .chart-line{fill:none;stroke:#c3d7c3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.detail-table-wrap{overflow-x:auto;margin:22px 0 10px}
+.detail-value-table{width:100%;min-width:620px;border-collapse:collapse;font-size:11px}
+.detail-value-table th,.detail-value-table td{text-align:left;padding:13px 12px;border-top:1px solid var(--line)}
+.detail-value-table th{font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--paper-2)}
+.detail-value-table tbody tr:last-child{font-weight:600;background:var(--paper-2)}
+.detail-assumption-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.detail-assumption{background:var(--paper-2);padding:17px 18px;min-height:105px}
+.detail-assumption span{display:block;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.detail-assumption strong{display:block;font:500 19px/1.3 var(--serif);color:var(--ink)}
+.detail-assumption small{display:block;font-size:10px;line-height:1.55;color:var(--muted);margin-top:6px}
+.detail-validation-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+.detail-validation-list article{border-left:2px solid var(--coral);background:var(--paper-2);padding:18px 19px}
+.detail-validation-list article span{font:9px var(--mono);letter-spacing:.08em;color:var(--coral)}
+.detail-validation-list article p{font-size:11px;line-height:1.75;margin:10px 0 0}
+@media(max-width:760px){.detail-assumption-grid{grid-template-columns:repeat(2,1fr)}.detail-validation-list{grid-template-columns:1fr}}
+@media(max-width:680px){.detail-assumption{padding:14px 12px;min-height:96px}.detail-assumption strong{font-size:17px}.detail-value-table{min-width:560px}}
+
