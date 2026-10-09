@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="description" content="Investment management coursework comparing FTSE 100 equity strategies, multi-asset fund performance and portfolio attribution." />
+    <title>Portfolio Construction &amp; Attribution — Rithik Besare</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../project-detail.css" />
+    <link rel="stylesheet" href="investment-management.css" />
+    <script src="../../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="../../" aria-label="Rithik Besare home"><span class="wordmark-mark">R</span><span>Rithik B<span class="wordmark-dot">.</span></span></a>
+      <a class="project-back" href="../../#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="project-detail">
+      <p class="detail-breadcrumb">Academic project / Investment management / Portfolio analysis</p>
+      <section class="detail-hero" aria-labelledby="project-title">
+        <div>
+          <p class="detail-kicker">PORTFOLIO CONSTRUCTION · RISK &amp; RETURN · PERFORMANCE ATTRIBUTION</p>
+          <h1 id="project-title">Portfolio construction <em>&amp; performance</em></h1>
+          <p class="detail-lede">A two-part investment-management study comparing four FTSE 100 equity strategies and a multi-asset fund against its benchmark. The work examines return and risk trade-offs, asset allocation and security selection, then checks the report’s conclusions against the workbook calculations.</p>
+        </div>
+        <div class="detail-cover investment-cover" role="img" aria-label="Illustrative allocation chart showing an ESG and cash portfolio compared with its benchmark">
+          <span class="detail-cover-label top">PORTFOLIO ALLOCATION · TASK 2</span>
+          <svg class="investment-chart" viewBox="0 0 480 220" role="img" aria-labelledby="allocation-title allocation-description">
+            <title id="allocation-title">Portfolio weight illustration</title>
+            <desc id="allocation-description">The portfolio holds about 46 percent in an ESG fund and 54 percent in cash, with no bond allocation.</desc>
+            <circle class="allocation-track" cx="225" cy="112" r="57" />
+            <circle class="allocation-esg" cx="225" cy="112" r="57" />
+            <circle class="allocation-cash" cx="225" cy="112" r="57" />
+            <text class="allocation-center-top" x="225" y="108" text-anchor="middle">45.96%</text>
+            <text class="allocation-center-bottom" x="225" y="128" text-anchor="middle">ESG FUND</text>
+            <path class="allocation-guide" d="M283 78L337 52H427M280 150L337 177H427" />
+            <text class="allocation-side-label" x="344" y="44">54.04% CASH</text>
+            <text class="allocation-side-label" x="344" y="196">0% BONDS</text>
+            <path class="allocation-grid" d="M25 48H128M25 112H128M25 176H128" />
+            <text class="allocation-side-note" x="28" y="39">BENCHMARK</text>
+            <text class="allocation-side-note" x="28" y="104">60% ESG · 35% BONDS</text>
+            <text class="allocation-side-note" x="28" y="168">5% CASH</text>
+          </svg>
+          <span class="detail-cover-label bottom">EQUITY STRATEGIES · MULTI-ASSET ATTRIBUTION</span>
+        </div>
+      </section>
+      <div class="detail-facts" aria-label="Project details">
+        <div class="detail-fact"><span>Equity universe</span><b>30 FTSE 100 shares</b></div>
+        <div class="detail-fact"><span>Equity approaches</span><b>4 portfolio strategies</b></div>
+        <div class="detail-fact"><span>Evaluation window</span><b>12 monthly returns</b></div>
+        <div class="detail-fact"><span>Attribution base</span><b>£450,000</b></div>
+      </div>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">01</span><h2>Equity portfolio strategies</h2></div>
+        <p class="detail-question">How do short-sale permissions and beta-based selection change the return and risk profile of a 30-share portfolio?</p>
+        <p>The workbook constructs four FTSE 100 equity portfolios: no short sales, short sales allowed, high beta and low beta. It uses monthly share-price observations to calculate portfolio returns and compares the four approaches with the FTSE 100 over 12 monthly observations from December 2023 to November 2024.</p>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table">
+            <thead><tr><th scope="col">Strategy</th><th scope="col">Annualised return</th><th scope="col">Annualised volatility</th><th scope="col">Sharpe ratio</th></tr></thead>
+            <tbody>
+              <tr><td>No short sales</td><td>11.69%</td><td>11.79%</td><td>0.1738</td></tr>
+              <tr><td>Short sales allowed</td><td>17.36%</td><td>17.21%</td><td>0.2030</td></tr>
+              <tr><td>High beta</td><td>12.43%</td><td>18.00%</td><td>0.1245</td></tr>
+              <tr><td>Low beta</td><td>6.23%</td><td>10.34%</td><td>0.0571</td></tr>
+              <tr><td>FTSE 100 reference</td><td>11.13%</td><td>7.32%</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail-caption">Returns compound the average monthly return. Volatility annualises monthly standard deviation by √12. The equity-strategy Sharpe ratios use monthly excess return divided by monthly standard deviation.</p>
+        <div class="detail-note"><p><strong>Short-sale exposure:</strong> The short-sale portfolio’s net weights sum to 100%, but its absolute weights total about 442%. Nineteen of the 30 positions are short. This higher gross exposure helps explain why its 17.36% return comes with 17.21% annualised volatility, versus 7.32% for the FTSE 100 reference.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">02</span><h2>Multi-asset fund and benchmark</h2></div>
+        <p>The second exercise compares a portfolio of an emerging-markets ESG fund, a long-term bond fund and a short-term cash fund with a benchmark made from corresponding ESG, aggregate-bond and Treasury-bill instruments. The workbook’s portfolio weights differ materially from the benchmark mix.</p>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table allocation-table">
+            <thead><tr><th scope="col">Asset class</th><th scope="col">Portfolio holding</th><th scope="col">Portfolio weight</th><th scope="col">Benchmark holding</th><th scope="col">Benchmark weight</th><th scope="col">Weight gap</th></tr></thead>
+            <tbody>
+              <tr><td>ESG equity</td><td>EEM</td><td>45.96%</td><td>IEMG</td><td>60.00%</td><td>−14.04 pp</td></tr>
+              <tr><td>Bonds</td><td>BLV</td><td>0.00%</td><td>AGG</td><td>35.00%</td><td>−35.00 pp</td></tr>
+              <tr><td>Cash / T-bills</td><td>BIL</td><td>54.04%</td><td>IRX</td><td>5.00%</td><td>+49.04 pp</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="detail-takeaways">
+          <article><b>PORTFOLIO RETURN</b><p>8.61% annualised from the workbook’s 12 monthly returns.</p></article>
+          <article><b>BENCHMARK RETURN</b><p>10.63% annualised over the same reported period.</p></article>
+          <article><b>ANNUALISED VOLATILITY</b><p>4.13% for the portfolio and 5.72% for the benchmark.</p></article>
+        </div>
+        <p>The portfolio held no bonds and allocated 54.04% to cash, while the benchmark assigned 35% to bonds and only 5% to cash. The report’s asset list blends portfolio and benchmark instruments; the workbook keeps the three portfolio holdings separate from the three benchmark holdings.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">03</span><h2>Performance attribution</h2></div>
+        <p>The workbook decomposes the multi-asset portfolio’s average monthly excess return into asset allocation, security selection and interaction effects. The effects reconcile to the total return difference in the attribution schedule.</p>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table">
+            <thead><tr><th scope="col">Effect</th><th scope="col">Return contribution</th><th scope="col">Scaled to £450,000</th></tr></thead>
+            <tbody>
+              <tr><td>Asset allocation</td><td>−0.1336%</td><td>−£601</td></tr>
+              <tr><td>Security selection</td><td>+0.0515%</td><td>+£232</td></tr>
+              <tr><td>Interaction</td><td>−0.0727%</td><td>−£327</td></tr>
+              <tr><td>Total relative result</td><td>−0.1549%</td><td>−£697</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail-caption">The £ figures scale the average monthly attribution contributions by the workbook’s £450,000 reference amount. They are relative contributions, not a statement that the fund’s closing balance fell to £700.</p>
+        <div class="detail-callout"><p>Cash overweight and the absence of bond holdings contributed to the negative allocation effect. Security selection added a small positive contribution, but it did not offset the allocation and interaction effects.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">04</span><h2>Review of the report and workbook</h2></div>
+        <div class="detail-validation-list">
+          <article><span>RISK-RATIO FORMULAS</span><p>In the multi-asset section, the workbook subtracts standard deviation, beta and downside deviation from the risk premium to produce Sharpe, Treynor and Sortino labels. Those measures require division. The corresponding reported ratios are therefore not reliable and are not presented here as valid results.</p></article>
+          <article><span>PORTFOLIO VS BENCHMARK</span><p>The workbook assigns EEM, BLV and BIL to the portfolio, while IEMG, AGG and IRX form the benchmark. The report sometimes describes all six as holdings in the same portfolio.</p></article>
+          <article><span>£450,000 INTERPRETATION</span><p>The roughly £697 figure is the average monthly relative attribution scaled to the workbook’s reference amount. It is not the portfolio’s ending value or total loss.</p></article>
+          <article><span>SHORTING ASSUMPTIONS</span><p>The short-sale portfolio has about 442% gross exposure. The workbook does not show explicit borrowing, margin or transaction-cost adjustments alongside the reported returns.</p></article>
+        </div>
+        <div class="detail-callout"><p>The multi-asset performance comparison uses 12 monthly observations. The report cites broad publisher homepages, but the files do not identify exact market-data providers or price retrieval dates, limiting independent reproduction.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">05</span><h2>Methods applied</h2></div>
+        <div class="detail-theme-grid">
+          <article class="detail-theme"><span class="theme-index">01 / PORTFOLIO DESIGN</span><h3>Compare investment constraints</h3><p>Built a 30-share universe and contrasted long-only, short-sale, high-beta and low-beta portfolio weights.</p></article>
+          <article class="detail-theme"><span class="theme-index">02 / RISK &amp; RETURN</span><h3>Measure strategy trade-offs</h3><p>Calculated monthly returns, annualised return and volatility, beta, downside deviation and risk-adjusted measures.</p></article>
+          <article class="detail-theme"><span class="theme-index">03 / ATTRIBUTION</span><h3>Explain relative performance</h3><p>Separated allocation, security-selection and interaction contributions for a multi-asset fund against its benchmark.</p></article>
+          <article class="detail-theme"><span class="theme-index">04 / MODEL REVIEW</span><h3>Check formulas against claims</h3><p>Reconciled workbook outputs with the report and identified formula and interpretation issues.</p></article>
+        </div>
+        <div class="detail-note"><p><strong>Scope:</strong> This page summarises the coursework and selected workbook results. It does not reproduce the original workbook’s stock-level price data or recommendations.</p></div>
+      </section>
+      <footer class="detail-footer"><p>INVESTMENT MANAGEMENT · PORTFOLIO CONSTRUCTION · PERFORMANCE ATTRIBUTION</p><a class="button button-dark" href="../../#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </body>
+</html>
+
