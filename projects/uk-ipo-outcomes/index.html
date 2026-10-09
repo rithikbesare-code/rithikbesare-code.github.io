@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="description" content="A detailed review of the Chen–Besare MSc dissertation on UK IPO outcomes, its reported panel results, and the data and model limits found in the supplied files." />
+    <title>Unravelling UK IPO Outcomes — Rithik Besare</title>
+    <link rel="stylesheet" href="../../project-detail.css" />
+    <link rel="stylesheet" href="ipo.css" />
+    <script src="../../script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="../../" aria-label="Rithik Besare home"><span class="wordmark-mark">R</span><span>Rithik B<span class="wordmark-dot">.</span></span></a>
+      <a class="project-back" href="../../#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main" class="project-detail ipo-project">
+      <p class="detail-breadcrumb">Academic project / MSc dissertation / UK equity markets</p>
+      <section class="detail-hero" aria-labelledby="project-title">
+        <div>
+          <p class="detail-kicker">CHEN–BESARE · MSc FINANCE &amp; INVESTMENT DISSERTATION</p>
+          <h1 id="project-title">Unravelling <em>UK IPO outcomes</em></h1>
+          <p class="detail-lede">This dissertation studies the post-listing performance of UK IPOs and asks whether company characteristics and market conditions help explain longer-run outcomes. I reviewed the dissertation alongside its Excel panel and EViews output, separating the estimates reported in the paper from results that can be checked directly in the supplied workbook.</p>
+        </div>
+        <div class="detail-cover ipo-cover" role="img" aria-label="Illustration of an IPO offer price, first-day market price and longer-term benchmark return">
+          <span class="detail-cover-label top">FROM OFFER TO MARKET PERFORMANCE</span>
+          <div class="ipo-cover-title"><span>IPO OUTCOMES</span><strong>UK listed firms · four-year follow-up</strong></div>
+          <div class="ipo-cover-chart" aria-hidden="true">
+            <span class="ipo-y-label y-one">POST-IPO</span><span class="ipo-y-label y-two">OFFER</span>
+            <i class="ipo-gridline grid-one"></i><i class="ipo-gridline grid-two"></i><i class="ipo-gridline grid-three"></i>
+            <div class="ipo-bars"><i class="offer-bar"></i><i class="first-close-bar"></i><i class="year-one-bar"></i><i class="year-two-bar"></i><i class="year-three-bar"></i></div>
+            <div class="ipo-x-labels"><span>OFFER</span><span>DAY 1</span><span>YEAR 1</span><span>YEAR 2</span><span>YEAR 3</span></div>
+            <div class="ipo-benchmark-line"><span>FTSE 100 benchmark</span></div>
+          </div>
+          <span class="detail-cover-label bottom">REPORTED PANEL · DATA RECONCILIATION REVIEW</span>
+        </div>
+      </section>
+
+      <div class="detail-facts" aria-label="Project details">
+        <div class="detail-fact"><span>IPO companies</span><b>50</b></div>
+        <div class="detail-fact"><span>Workbook panel</span><b>200 rows · 4 per firm</b></div>
+        <div class="detail-fact"><span>IPO years in workbook</span><b>2010–2021</b></div>
+        <div class="detail-fact"><span>Reported approach</span><b>Random-effects panel GLS</b></div>
+      </div>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">01</span><h2>Research question and study design</h2></div>
+        <p>The dissertation asks how UK IPOs perform after listing and whether size, pre-IPO profitability, leverage, initial underpricing, equity dilution and market conditions help explain their later returns. The report describes a purposive sample of 50 companies, each followed for four annual observations, with the FTSE 100 used as the market benchmark.</p>
+        <p>The supplied workbook contains 200 firm-year rows across calendar years 2010–2024. The IPO-year field itself ranges from 2010 to 2021. Each company appears four times, so the 2010–2024 span describes the calendar years represented in the panel; it does not mean the workbook contains IPOs issued throughout all 15 years.</p>
+        <div class="ipo-design-grid">
+          <article><span>01 / OUTCOME</span><h3>Post-listing performance</h3><p>The dissertation defines buy-and-hold abnormal return (BHAR) against the FTSE 100 over a multi-year holding period.</p></article>
+          <article><span>02 / EXPLANATORY FACTORS</span><h3>Company and market data</h3><p>Reported factors include IPO size, ROA, debt ratio, underpricing, equity dilution, GDP growth, interest rates and market sentiment.</p></article>
+          <article><span>03 / ESTIMATION</span><h3>Panel random effects</h3><p>The dissertation reports random-effects GLS models in EViews 12 Student Lite with robust standard errors.</p></article>
+        </div>
+        <p class="ipo-equation">BHAR = compounded IPO-company return − compounded benchmark return</p>
+        <p class="detail-caption">The equation summarises the dissertation’s stated buy-and-hold comparison. The paper identifies the FTSE 100 as the benchmark; the calculation could not be reproduced from the supplied workbook values.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">02</span><h2>Results reported in the dissertation</h2></div>
+        <p>The three EViews tables show positive ROA coefficients that are statistically significant at the 5% level in each model. The other explanatory variables shown below do not meet that threshold in the reported tables. Model fit is reported at approximately 40–41% weighted R², with an overall model p-value below 0.001 in each output.</p>
+        <div class="ipo-result-strip" aria-label="Summary of reported model outputs">
+          <article><span>ROA · MODEL 1</span><b>+2.659</b><small>p = .0082</small></article>
+          <article><span>ROA · MODEL 2</span><b>+2.397</b><small>p = .0012</small></article>
+          <article><span>ROA · MODEL 3</span><b>+2.566</b><small>p = .0102</small></article>
+          <article><span>WEIGHTED R²</span><b>0.402–0.412</b><small>Across the three outputs</small></article>
+        </div>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table ipo-results-table">
+            <thead><tr><th scope="col">Model / question</th><th scope="col">Reported coefficient</th><th scope="col">p-value</th><th scope="col">As shown in output</th></tr></thead>
+            <tbody>
+              <tr class="ipo-significant"><td>Model 1 · ROA</td><td>+2.659191</td><td>.0082</td><td>Positive; significant</td></tr>
+              <tr><td>Model 1 · IPO size</td><td>−0.000149</td><td>.2097</td><td>Not significant</td></tr>
+              <tr><td>Model 1 · Debt ratio</td><td>+0.113072</td><td>.7755</td><td>Not significant</td></tr>
+              <tr><td>Model 1 · Underpricing</td><td>+0.122078</td><td>.2312</td><td>Not significant</td></tr>
+              <tr><td>Model 1 · Market sentiment</td><td>−0.129871</td><td>.2818</td><td>Not significant</td></tr>
+              <tr class="ipo-significant"><td>Model 2 · ROA</td><td>+2.397320</td><td>.0012</td><td>Positive; significant</td></tr>
+              <tr><td>Model 2 · IPO size</td><td>−0.000141</td><td>.1337</td><td>Not significant</td></tr>
+              <tr><td>Model 2 · GDP growth</td><td>−0.987023</td><td>.0829</td><td>Not significant at 5%</td></tr>
+              <tr><td>Model 2 · Interest rate</td><td>−0.808529</td><td>.1660</td><td>Not significant</td></tr>
+              <tr class="ipo-significant"><td>Model 3 · ROA</td><td>+2.565886</td><td>.0102</td><td>Positive; significant</td></tr>
+              <tr><td>Model 3 · Equity dilution</td><td>+0.068278</td><td>.4927</td><td>Not significant</td></tr>
+              <tr><td>Model 3 · IPO size</td><td>−0.000155</td><td>.2187</td><td>Not significant</td></tr>
+              <tr><td>Model 3 · Debt ratio</td><td>+0.086834</td><td>.8355</td><td>Not significant</td></tr>
+              <tr><td>Model 3 · Market sentiment</td><td>−0.123540</td><td>.3060</td><td>Not significant</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail-caption">Coefficients and p-values are transcribed from the dissertation’s reported regression tables and EViews screenshots; they are not estimates recalculated from the workbook. “Significant” means p &lt; 0.05. The report does not provide enough model-ready data to independently reproduce the tables.</p>
+        <div class="detail-note ipo-interpretation-note"><p><strong>Interpretation of the report:</strong> ROA is the only factor that is positive and significant in all three displayed models. This pattern differs from the abstract and conclusion, which emphasise size and debt or dilution more strongly. Those closing claims are not supported by the p-values in the displayed tables.</p></div>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">03</span><h2>Workbook checks and data quality</h2></div>
+        <p>I checked the workbook’s annual return series and compared the main variables with the formulas stated in the dissertation. The annual stock and FTSE returns reproduce from their corresponding year-end price or index levels for all 200 rows. Several accounting and IPO variables do not reproduce consistently from the supplied values.</p>
+        <div class="detail-table-wrap">
+          <table class="detail-value-table ipo-check-table">
+            <thead><tr><th scope="col">Workbook field</th><th scope="col">Definition stated in dissertation</th><th scope="col">Formula check</th></tr></thead>
+            <tbody>
+              <tr><td>Underpricing</td><td>(First-day close − offer price) ÷ offer price</td><td>11 of 47 numeric values match within 0.01 percentage point; mean absolute difference 6.64 points</td></tr>
+              <tr><td>Equity dilution</td><td>Shares offered ÷ total shares after IPO</td><td>5 of 50 match within 0.01 point; mean absolute difference 35.88 points</td></tr>
+              <tr><td>ROA</td><td>Net income ÷ total assets</td><td>21 of 192 match within 0.01 point; mean absolute difference 7.61 points</td></tr>
+              <tr><td>Debt ratio</td><td>Total debt ÷ total assets</td><td>85 of 200 match within 0.01 point; mean absolute difference 15.81 points</td></tr>
+              <tr><td>IPO size</td><td>Offer price × total shares after IPO</td><td>22 of 50 match within £0.01m; mean absolute difference £351.99m</td></tr>
+              <tr><td>BHAR</td><td>Buy-and-hold IPO return less benchmark return</td><td>0 of 192 reconcile to the annual or cumulative market-adjusted return from the provided series; cumulative comparison mean absolute difference 38.73 points</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="detail-caption">Formula checks use the definitions written in the dissertation and values in the submitted workbook. Small rounding differences are allowed at the stated 0.01 threshold. For BHAR, the workbook’s annual stock and FTSE return columns were also used to check both annual and compounded market-adjusted returns.</p>
+        <div class="ipo-integrity-grid">
+          <article><strong>200</strong><span>firm-year rows in the sheet</span></article>
+          <article><strong>50</strong><span>distinct company IDs</span></article>
+          <article><strong>47–50</strong><span>populated IPO-level values for key regressors</span></article>
+          <article><strong>192</strong><span>numeric BHAR values; 8 missing</span></article>
+        </div>
+        <p>Several IPO-level fields—including offer price, shares offered, first-day close and size—are populated for about 50 rows, while the remaining firm-year rows contain missing-value markers. Underpricing is numeric for 47 rows. The EViews screenshots nevertheless report 200 observations in each model. The submitted files do not explain how IPO-level variables were carried across years or how missing values were handled, so the reported regressions cannot be reconstructed from this workbook as supplied.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">04</span><h2>Panel-model and interpretation limits</h2></div>
+        <div class="detail-validation-list">
+          <article><span>HAUSMAN TESTS</span><p>All three EViews screenshots show a Hausman statistic of zero with p = 1.000, but also state that the cross-section test variance is invalid and the statistic was set to zero. Each includes a warning that robust standard errors may not meet the Hausman variance assumptions. These outputs do not provide valid evidence that random effects is preferred. EViews documentation also cautions that Hausman results may be suspect when robust standard errors are used.</p></article>
+          <article><span>MODEL SAMPLE</span><p>The workbook has four annual rows per company, but the IPO-level explanatory fields are mostly present only once per firm. The output reports 200 observations. Without the EViews workfile or a documented rule for expanding those variables, it is unclear which observations contributed to each coefficient.</p></article>
+          <article><span>BHAR OUTCOME</span><p>The BHAR column is central to the dissertation’s outcome, yet it does not reconcile with the supplied stock and FTSE return series under the stated benchmark comparison. Long-run abnormal-return methods are sensitive to how the holding-period return and reference portfolio are constructed; the workbook does not identify a reproducible calculation.</p></article>
+          <article><span>CONCLUSION VS TABLES</span><p>The conclusion describes size and dilution as significant or more consistent drivers, while the displayed tables show their p-values above 0.05. The abstract, results narrative and conclusion also differ on the importance of profitability. The numerical tables are presented here as the reported output, with the conflicting interpretation noted.</p></article>
+        </div>
+        <p class="detail-caption">The supplied EViews screenshots use a robust covariance option labelled “White period (cross-section cluster)” and report weighted R². These are details of the reported output, not a substitute for a valid model-selection test or an independently reproducible panel.</p>
+      </section>
+
+      <section class="detail-section">
+        <div class="detail-section-heading"><span class="detail-section-number">05</span><h2>What the project shows</h2></div>
+        <p>The dissertation brings together IPO characteristics, company accounts, annual market returns and macroeconomic variables in a UK listing study. Its three reported models consistently show a positive ROA association, while size, debt, underpricing, dilution and the macro variables do not reach the 5% significance threshold in the corresponding tables.</p>
+        <p>Those results should be read as findings reported by the dissertation rather than independently verified estimates. The source workbook’s formula mismatches, incomplete IPO-level fields, unreconciled BHAR values and invalid Hausman warnings prevent a reliable replication from the files supplied.</p>
+        <div class="ipo-next-steps">
+          <h3>For a reproducible re-analysis</h3>
+          <ol>
+            <li>Document the IPO event date, annual observation windows and the four-year holding-period convention for every firm.</li>
+            <li>Recalculate IPO characteristics and accounting ratios from traceable inputs, then document how time-invariant variables enter the panel.</li>
+            <li>Rebuild BHAR from firm and benchmark total-return series with a stated dividend and delisting policy.</li>
+            <li>Provide the model-ready data and estimation commands, then rerun the model and report a valid specification check.</li>
+          </ol>
+        </div>
+        <div class="detail-note"><p><strong>Files reviewed:</strong> <em>Chen-Besare Unravelling UK IPO Outcomes.docx</em> and <em>Chen-Besare Unravelling UK IPO Outcomes.xlsx</em>. The coursework files are not reproduced on this public page; only a summary of the analysis and review is published.</p></div>
+      </section>
+
+      <section class="detail-section ipo-sources">
+        <div class="detail-section-heading"><span class="detail-section-number">06</span><h2>References and data notes</h2></div>
+        <ul>
+          <li>Barber, B. M. and Lyon, J. D. (1997), <a href="https://doi.org/10.1016/S0304-405X(96)00890-2" target="_blank" rel="noreferrer">“Detecting Long-Run Abnormal Stock Returns: The Empirical Power and Specification of Test Statistics”</a>, <em>Journal of Financial Economics</em>, 43(3), 341–372.</li>
+          <li>Levis, M. (1993), <a href="https://doi.org/10.2307/3665963" target="_blank" rel="noreferrer">“The Long-Run Performance of Initial Public Offerings: The UK Experience 1980–1988”</a>, <em>Financial Management</em>, 22(1), 28–41.</li>
+          <li>EViews, <a href="https://eviews.com/help/content/equationcmd-ranhaus.html" target="_blank" rel="noreferrer">Hausman specification test documentation</a>, including a note about potential issues with robust standard errors.</li>
+          <li>World Bank, <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=GB" target="_blank" rel="noreferrer">GDP growth (annual %) — United Kingdom</a>. The dissertation identifies World Bank GDP data among its macroeconomic sources.</li>
+          <li>The dissertation also lists company prospectuses and annual reports, market data from Yahoo Finance, the London Stock Exchange and FTSE, and macroeconomic series. The workbook does not map individual observations to source URLs, retrieval dates or raw series identifiers.</li>
+        </ul>
+      </section>
+
+      <footer class="detail-footer"><p>UK IPOs · PANEL DATA · MSc FINANCE &amp; INVESTMENT</p><a class="button button-dark" href="../../#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </body>
+</html>
+
