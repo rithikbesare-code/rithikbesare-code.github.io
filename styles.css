@@ -49,3 +49,15 @@ body[data-theme=dark] .visual-quant{background:radial-gradient(circle at 50% 52%
 .invest-bar-chart span{position:absolute;bottom:-17px;font:7px var(--mono);letter-spacing:.04em;color:#bdcdbd;white-space:nowrap}
 .invest-foot{border-top:1px solid #d9e2d266;padding-top:10px}
 body[data-theme=dark] .visual-investment{background:radial-gradient(circle at 52% 52%,#395344 0,#293f33 58%,#20352b 100%)}
+
+.visual-wipro{background:radial-gradient(circle at 50% 50%,#315d49 0,#203a31 58%,#172d27 100%);color:#f3f1e8;padding:22px 25px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.visual-wipro:before,.visual-wipro:after{content:"";position:absolute;left:8%;right:8%;border-top:1px solid #c8d7c62a;pointer-events:none}
+.visual-wipro:before{top:37%}.visual-wipro:after{top:63%}
+.wipro-card-head,.wipro-card-foot{position:relative;z-index:2;display:flex;justify-content:space-between;font:8px var(--mono);letter-spacing:.09em;color:#d1ddce}
+.wipro-card-bars{height:133px;position:relative;display:flex;align-items:end;justify-content:space-around;padding:0 14px 18px;border-bottom:1px solid #c8d7c655}
+.wipro-card-bar{height:100%;width:24%;display:flex;align-items:end;justify-content:center;position:relative}
+.wipro-card-bar i{display:block;width:min(34px,50%);height:var(--h);background:linear-gradient(180deg,#dfe8d5,#83a28a);border-radius:3px 3px 0 0;box-shadow:0 0 18px #dbe5d522}
+.wipro-card-bar span{position:absolute;bottom:-17px;font:7px var(--mono);letter-spacing:.05em;color:#bdcdbd}
+.wipro-card-foot{border-top:1px solid #d9e2d266;padding-top:10px}
+body[data-theme=dark] .visual-wipro{background:radial-gradient(circle at 50% 50%,#395344 0,#293f33 58%,#20352b 100%)}
+
