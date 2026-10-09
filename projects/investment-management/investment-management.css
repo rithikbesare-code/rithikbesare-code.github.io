@@ -1,0 +1,20 @@
+.investment-cover{display:block;background:radial-gradient(circle at 48% 49%,#294b3d 0,#203a31 55%,#172d27 100%);color:#f4f1e8}
+.investment-cover:before,.investment-cover:after{border-color:#78917d;opacity:.45}
+.investment-cover .detail-cover-label{color:#d3e0d3}
+.investment-chart{position:absolute;inset:51px 18px 42px;width:calc(100% - 36px);height:calc(100% - 93px);overflow:visible}
+.allocation-track,.allocation-esg,.allocation-cash{fill:none;stroke-width:17}
+.allocation-track{stroke:#78917d55}
+.allocation-esg{stroke:#e5a184;stroke-dasharray:164.6 193.5;stroke-dashoffset:0;transform:rotate(-90deg);transform-origin:225px 112px}
+.allocation-cash{stroke:#b9d0b8;stroke-dasharray:193.5 164.6;stroke-dashoffset:-164.6;transform:rotate(-90deg);transform-origin:225px 112px}
+.allocation-center-top{font:500 20px var(--serif);fill:#f4f1e8}
+.allocation-center-bottom{font:8px var(--mono);letter-spacing:.1em;fill:#cfddcf}
+.allocation-guide{fill:none;stroke:#c8d7c688;stroke-width:1}
+.allocation-grid{fill:none;stroke:#c8d7c633;stroke-width:1}
+.allocation-side-label{font:9px var(--mono);letter-spacing:.08em;fill:#e2e8dc}
+.allocation-side-note{font:8px var(--mono);letter-spacing:.04em;fill:#c4d3c5}
+.detail-caption{margin:4px 0 18px;font-size:10px;line-height:1.7;color:var(--muted)}
+.allocation-table{min-width:760px}
+.allocation-table tbody tr:last-child{font-weight:400;background:transparent}
+.allocation-table tbody tr:last-child td:last-child{font-weight:600;background:var(--paper-2)}
+body[data-theme=dark] .investment-cover{background:radial-gradient(circle at 48% 49%,#395344 0,#293f33 58%,#20352b 100%)}
+
